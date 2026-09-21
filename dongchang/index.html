@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="东昌县历史文化、旅游指南及地方特产介绍。探索东昌府的古城风貌、运河文化和非遗传承，提供旅游攻略、美食推荐及交通信息。">
+    <meta name="keywords" content="东昌, 东昌府, 山东聊城, 运河文化, 光岳楼, 东昌湖">
+    <title>东昌-运河古郡旅游与地方文化指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #F4A460;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #F9F9F9;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/seed/dongchang/1920/600.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Attractions Section */
+        .attractions {
+            padding: 80px 0;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Culture & History */
+        .culture {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .culture-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .culture-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .culture-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .culture-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .culture-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .culture-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .culture-img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .culture-img img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+                display: none;
+                margin-top: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">东昌<span>文旅</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#attractions">景点推荐</a></li>
+                    <li><a href="#culture">历史文化</a></li>
+                    <li><a href="#food">特色美食</a></li>
+                    <li><a href="#guide">旅游攻略</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>遇见东昌</h1>
+                <p>漫步运河古郡，感受千年古城的厚重与灵动。探索东昌府的独特魅力，体验鲁西文化的精髓。</p>
+                <a href="#attractions" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Intro Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h3>千年古城</h3>
+                        <p>东昌府历史悠久，建城已有1400余年，是国家级历史文化名城。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🌊</div>
+                        <h3>运河明珠</h3>
+                        <p>京杭大运河穿境而过，滋养了一方水土，见证了商贸繁荣的过往。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>非遗传承</h3>
+                        <p>拥有东昌葫芦雕刻、东昌木板年画等国家级非物质文化遗产。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📷</div>
+                        <h3>湖光山色</h3>
+                        <p>东昌湖水域辽阔，湖光潋滟，是休闲度假、摄影采风的绝佳去处。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="attractions">
+            <div class="container">
+                <div class="section-title">
+                    <h2>必游景点</h2>
+                    <p>领略东昌地标建筑的雄伟与精致</p>
+                </div>
+                <div class="attractions-grid">
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/guangyuelou/400/300.jpg" alt="光岳楼">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">地标建筑</span>
+                            <h3 class="card-title">光岳楼</h3>
+                            <p class="card-desc">光岳楼位于聊城古城中央，始建于明洪武年间。楼高33米，为中国十大名楼之一，结构精巧，气势宏伟，是东昌的象征。</p>
+                            <div class="card-footer">
+                                <span class="card-link">查看详情 →</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/dongchanghu/400/300.jpg" alt="东昌湖">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">自然风光</span>
+                            <h3 class="card-title">东昌湖</h3>
+                            <p class="card-desc">东昌湖环抱古城，水域面积达6平方公里。湖中有岛，岛中有湖，景色宜人，被誉为“江北水城”的眼睛。</p>
+                            <div class="card-footer">
+                                <span class="card-link">查看详情 →</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/hulu/400/300.jpg" alt="东昌葫芦文化博物馆">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">文化体验</span>
+                            <h3 class="card-title">葫芦文化博物馆</h3>
+                            <p class="card-desc">这里展示了东昌葫芦雕刻的精湛技艺。您可以近距离欣赏大师作品，了解这一国家级非遗的传承与发展。</p>
+                            <div class="card-footer">
+                                <span class="card-link">查看详情 →</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture & History Section -->
+        <section id="culture" class="culture">
+            <div class="container">
+                <div class="culture-content">
+                    <div class="culture-img">
+                        <img src="https://picsum.photos/seed/history/600/400.jpg" alt="东昌历史风貌">
+                    </div>
+                    <div class="culture-text">
+                        <h2>深厚的历史底蕴</h2>
+                        <p>东昌，古称东昌府，是山东省聊城市的中心城区。自宋代设府以来，东昌便一直是鲁西地区的政治、经济、文化中心。</p>
+                        <p>这里不仅是京杭大运河的重要码头，更是明清两代的重要商业重镇。古老的运河水不仅带来了繁荣的商贸，也孕育了独特的水乡文化。</p>
+                        <ul class="culture-list">
+                            <li><strong>古建筑群：</strong>保存完好的古城墙与护城河体系。</li>
+                            <li><strong>戏曲文化：</strong>深受运河影响的山东梆子与临清腔。</li>
+                            <li><strong>民俗风情：</strong>多样的传统节庆与民间手工艺。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Section -->
+        <section id="food" style="padding: 80px 0; background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>特色美食</h2>
+                    <p>舌尖上的东昌，品味地道鲁西风味</p>
+                </div>
+                <div class="attractions-grid">
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/noodles/400/300.jpg" alt="东昌面食">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">东昌大面</h3>
+                            <p class="card-desc">东昌大面以面条劲道、汤头浓郁著称。传统的打卤面工艺讲究，配料丰富，是当地人的家常首选。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/sausage/400/300.jpg" alt="五香驴肉">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">魏氏熏鸡</h3>
+                            <p class="card-desc">魏氏熏鸡是东昌的特产名吃，色泽枣红，皮脆肉嫩，味道醇厚，远近闻名。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/soup/400/300.jpg" alt="八宝粥">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">八宝粥</h3>
+                            <p class="card-desc">选用当地优质糯米，配以红枣、花生、莲子等八种原料，慢火熬制，香甜软糯。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Guide Section -->
+        <section id="guide" style="padding: 80px 0; background-color: var(--white);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>旅游攻略</h2>
+                    <p>实用信息助您畅游东昌</p>
+                </div>
+                <div style="background: #f4f4f4; padding: 40px; border-radius: var(--border-radius);">
+                    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3 style="margin-bottom: 20px; color: var(--primary-color);">最佳旅游时间</h3>
+                            <p style="margin-bottom: 15px;">东昌四季分明，春秋两季气候宜人，最适合游览。春季万物复苏，秋季天高气爽，运河景色最为迷人。</p>
+                            <h3 style="margin-bottom: 20px; color: var(--primary-color);">交通指南</h3>
+                            <p>东昌交通便利，京九铁路与邯济铁路在此交汇。高速公路网络发达，自驾游也是不错的选择。</p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3 style="margin-bottom: 20px; color: var(--primary-color);">住宿推荐</h3>
+                            <p style="margin-bottom: 15px;">建议选择古城周边的酒店，既能感受夜景，又能方便游览光岳楼、东昌湖等核心景点。</p>
+                            <h3 style="margin-bottom: 20px; color: var(--primary-color);">注意事项</h3>
+                            <p>游览光岳楼需遵守登楼规定，爱护文物古迹。品尝美食时注意适量，夏季注意防暑降温。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于东昌</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">东昌文旅致力于推广山东聊城东昌府区的历史文化、旅游资源及地方特色。让更多人了解这座千年古城的魅力。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#attractions">景点介绍</a></li>
+                        <li><a href="#culture">文化底蕴</a></li>
+                        <li><a href="#guide">旅游攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：0635-1234567</li>
+                        <li>邮箱：contact@dongchang.cn</li>
+                        <li>地址：山东省聊城市东昌府区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 东昌文化旅游网 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
