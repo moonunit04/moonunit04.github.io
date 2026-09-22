@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="照相pose大全，提供专业人像摄影姿势指南、拍照技巧和不同场景下的摆姿建议，帮助拍摄者拍出自然又上镜的照片。">
+    <meta name="keywords" content="照相pose,拍照姿势,人像摄影技巧,摆拍教程,拍照指南">
+    <title>照相pose-专业人像摆姿指南与拍摄技巧</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #d35400;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Pose Cards */
+        .pose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pose-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .pose-image {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .pose-content {
+            padding: 1.2rem;
+        }
+
+        .pose-tag {
+            display: inline-block;
+            background-color: #e8f4fd;
+            color: #3498db;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pose-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .pose-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+        }
+
+        .tip-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .tip-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            color: var(--text-main);
+        }
+
+        .category-list a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .category-count {
+            background-color: #eee;
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 1rem;
+            display: none;
+            border-left: 3px solid var(--accent-color);
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-col p, .footer-col a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>📷</span> 照相pose指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#basic">基础入门</a></li>
+                    <li><a href="#fashion">时尚人像</a></li>
+                    <li><a href="#wedding">婚纱写真</a></li>
+                    <li><a href="#portrait">证件照</a></li>
+                </ul>
+            </nav>
+            <a href="#search" class="cta-btn">快速找姿势</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="search">
+            <h1>告别僵硬表情与尴尬摆拍</h1>
+            <p>无论是家庭聚会、职场面试还是网红打卡，这里为您提供从零开始的拍照姿势指南，助您轻松拍出自然、上镜的照片。</p>
+            <div class="search-box">
+                <input type="text" placeholder="输入场景或需求，例如：情侣、显瘦、职场...">
+                <button>搜索</button>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Fashion Section -->
+                <section id="fashion">
+                    <div class="section-header">
+                        <h2 class="section-title">时尚人像姿势</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">更多 &rarr;</a>
+                    </div>
+                    <div class="pose-grid">
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/fashion1/400/300" alt="侧身回眸" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">显瘦</span>
+                                <h3 class="pose-title">经典侧身回眸</h3>
+                                <p class="pose-desc">身体侧对镜头，头部缓慢转动回看，眼神聚焦于镜头外一点，自然流露故事感。</p>
+                            </div>
+                        </article>
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/fashion2/400/300" alt="手部动作" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">细节</span>
+                                <h3 class="pose-title">手部线条运用</h3>
+                                <p class="pose-desc">不要把手自然垂下，尝试托腮、扶发丝或做出"V"字手势，打破画面单调感。</p>
+                            </div>
+                        </article>
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/fashion3/400/300" alt="前景遮挡" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">构图</span>
+                                <h3 class="pose-title">利用前景增加层次</h3>
+                                <p class="pose-desc">透过树叶、栏杆或花朵拍摄，虚化前景能让主体更加突出，画面更有氛围。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Wedding Section -->
+                <section id="wedding">
+                    <div class="section-header">
+                        <h2 class="section-title">婚纱与情侣写真</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">更多 &rarr;</a>
+                    </div>
+                    <div class="pose-grid">
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/wedding1/400/300" alt="互动拥抱" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">甜蜜</span>
+                                <h3 class="pose-title">亲密互动拥抱</h3>
+                                <p class="pose-desc">不需要刻意摆拍，自然的拥抱、依偎和眼神交流，最能传达情感。</p>
+                            </div>
+                        </article>
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/wedding2/400/300" alt="对视镜头" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">深情</span>
+                                <h3 class="pose-title">对视镜头</h3>
+                                <p class="pose-desc">两人面对面站立，视线直视镜头，距离适中，展现出坚定的承诺感。</p>
+                            </div>
+                        </article>
+                        <article class="pose-card">
+                            <img src="https://picsum.photos/seed/wedding3/400/300" alt="背影" class="pose-image">
+                            <div class="pose-content">
+                                <span class="pose-tag">意境</span>
+                                <h3 class="pose-title">唯美背影剪影</h3>
+                                <p class="pose-desc">选择日出日落时分，让摄影师从背后拍摄，剪影效果极具艺术感。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Basic Section -->
+                <section id="basic">
+                    <div class="section-header">
+                        <h2 class="section-title">新手基础技巧</h2>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">1. 调整站姿重心</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-light);">不要双脚并拢站立，这会让身体看起来僵硬。建议将重心放在一条腿上，另一条腿微微弯曲放松。如果是坐着，避免双腿并拢过度，尝试一条腿在前一条在后，制造身体曲线。</p>
+                        
+                        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">2. 肩膀与下巴的线条</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-light);">下巴微收，不要仰头或过度低头，这会改变面部线条。肩膀保持放松，不要耸肩，尝试稍微向后打开双肩，让身体姿态看起来更挺拔自信。</p>
+                        
+                        <h3 style="margin-bottom: 1rem; color: var(--primary-color);">3. 眼神与表情</h3>
+                        <p style="color: var(--text-light);">眼神要有焦点。对着镜头时，不要直勾勾地看，可以看镜头上方一点，或者看向镜头侧方，这样眼神会更柔和。微笑时不要只用嘴，要带动眼部肌肉，眼中有光。</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">常见场景分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#">职场面试照 <span class="category-count">12</span></a></li>
+                        <li><a href="#">证件照修图 <span class="category-count">8</span></a></li>
+                        <li><a href="#">闺蜜合影 <span class="category-count">25</span></a></li>
+                        <li><a href="#">亲子照 <span class="category-count">15</span></a></li>
+                        <li><a href="#">全身照技巧 <span class="category-count">9</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">拍照小贴士</h3>
+                    <ul class="tip-list">
+                        <li>拍摄时尽量让摄影师蹲下或蹲下，仰拍更显腿长。</li>
+                        <li>利用身边的道具（如墨镜、咖啡、书籍）打破僵硬感。</li>
+                        <li>多尝试不同的角度，45度侧脸通常比正脸更有立体感。</li>
+                        <li>保持手机或相机稳定，避免画面模糊。</li>
+                        <li>衣服颜色尽量选择纯色或简约图案，避免杂乱。</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">热门推荐</h3>
+                    <article class="pose-card" style="box-shadow: none; border: 1px solid #eee;">
+                        <img src="https://picsum.photos/seed/pop1/300/150" alt="推荐" class="pose-image" style="height: 120px;">
+                        <div class="pose-content" style="padding: 0.5rem 0;">
+                            <h4 class="pose-title" style="font-size: 1rem;">如何拍出下颌线？</h4>
+                        </div>
+                    </article>
+                    <article class="pose-card" style="box-shadow: none; border: 1px solid #eee;">
+                        <img src="https://picsum.photos/seed/pop2/300/150" alt="推荐" class="pose-image" style="height: 120px;">
+                        <div class="pose-content" style="padding: 0.5rem 0;">
+                            <h4 class="pose-title" style="font-size: 1rem;">全身照怎么显瘦</h4>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header" style="border-bottom: none;">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">拍照总是僵硬怎么办？</div>
+                    <div class="faq-answer">
+                        <p>僵硬通常是因为过于在意镜头。建议拍摄前多走动、聊天，让自己放松。摄影师可以多拍一些抓拍镜头，而不是生硬的指令。专注于和摄影师的交流，而不是盯着取景器。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">拍照时手不知道往哪里放？</div>
+                    <div class="faq-answer">
+                        <p>手是容易显胖或显得僵硬的部位。可以将手放在腰间、插在口袋里，或者轻轻搭在身后的物体上。如果需要手部特写，可以轻托下巴或轻抚头发，利用手指的线条增加美感。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何选择适合自己的拍照姿势？</div>
+                    <div class="faq-answer">
+                        <p>没有绝对完美的姿势，只有最适合的。了解自己的身体优势（如长腿、锁骨）并加以利用。同时，选择符合自己性格的姿势，比如性格开朗的人适合大笑、奔跑等动态姿势，性格内敛的人适合静坐、眺望等静态姿势。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>📷 照相pose指南</h3>
+                    <p>专注分享实用的人像摄影姿势与拍摄技巧，帮助每个人都能拍出满意的照片。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <a href="#">关于我们</a>
+                    <a href="#">姿势分类</a>
+                    <a href="#">拍摄技巧</a>
+                    <a href="#">联系合作</a>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <p>获取最新的拍照教程</p>
+                    <p>微信：PhotoPoseGuide</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 照相pose指南 版权所有. 本站内容仅供学习参考.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
