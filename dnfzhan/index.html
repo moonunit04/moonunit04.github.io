@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dnf战灵天舞 - DNF（地下城与勇士）游戏攻略、装备搭配、技能加点与副本通关指南，提供最新的版本更新资讯与实战心得分享。">
+    <meta name="keywords" content="dnf战灵天舞, DNF攻略, 地下城与勇士, 装备搭配, 技能加点, 副本攻略">
+    <title>dnf战灵天舞 - 地下城与勇士装备搭配与实战攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff9d00;
+            --secondary-color: #ff4d4d;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-main: #ffffff;
+            --text-sub: #b3b3b3;
+            --border-radius: 8px;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #2b1d0e, #4a2c15);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: url('https://picsum.photos/seed/dnf/1920/600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: var(--spacing);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #ffb84d;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                display: none; /* Simplified mobile handling */
+            }
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #444;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #ccc;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #333;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: #000;
+        }
+
+        .guide-list li {
+            list-style: none;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 5px;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        /* Specific Features */
+        .feature-box {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 10px;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 40px 5% 20px;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+            color: var(--text-sub);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .highlight {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">DNF<span style="color: #fff;">攻略站</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">装备图鉴</a></li>
+                    <li><a href="#">职业攻略</a></li>
+                    <li><a href="#">副本指南</a></li>
+                    <li><a href="#">版本资讯</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>dnf战灵天舞</h1>
+                <p>深度解析“战灵天舞”套装属性与实战应用，助你打造极致伤害</p>
+                <a href="#guide" class="cta-button">查看完整攻略</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                
+                <!-- Intro Section -->
+                <section id="intro">
+                    <h2 class="section-title">关于战灵天舞</h2>
+                    <p style="margin-bottom: 15px;">“战灵天舞”是《地下城与勇士》中备受玩家关注的一套史诗防具套装，以其独特的技能形态和爆发伤害在当前版本中占据重要地位。本站为您提供关于该套装的详细数据、搭配推荐及获取途径。</p>
+                    <div class="card-grid">
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dnf1/400/250" alt="战灵天舞套装预览" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">套装属性概览</h3>
+                                <p class="card-text">详细介绍二件套、四件套及六件套的触发条件与数值加成，包括技能攻击力、攻击速度及特定技能等级的提升。</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dnf2/400/250" alt="实战效果" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">实战伤害分析</h3>
+                                <p class="card-text">结合不同职业特性，分析战灵天舞在主流副本（如巴卡尔、奥兹玛）中的输出表现与循环效率。</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dnf3/400/250" alt="获取途径" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">获取与升级</h3>
+                                <p class="card-text">提供最新的获取途径、升级材料需求以及兑换建议，帮助玩家高效提升装备强度。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detailed Guide -->
+                <section id="guide">
+                    <h2 class="section-title">核心搭配推荐</h2>
+                    <article class="card" style="padding: 20px;">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-color);">主流爆发流</h3>
+                        <p style="margin-bottom: 15px;">战灵天舞 + 荣耀祝福 + 鲁莽者系列。这套搭配利用战灵天舞的高技能攻击力，配合荣耀祝福提升的属性，在短时间内打出爆发伤害。</p>
+                        <ul style="list-style: disc; margin-left: 20px; color: #ccc;">
+                            <li><strong>核心优势：</strong> 技能形态优秀，无后摇。</li>
+                            <li><strong>适用职业：</strong> 大部分百分比伤害职业。</li>
+                            <li><strong>注意事项：</strong> 需注意蓝量消耗，建议搭配减耗装备。</li>
+                        </ul>
+                    </article>
+
+                    <article class="card" style="padding: 20px; margin-top: 20px;">
+                        <h3 style="margin-bottom: 10px; color: var(--secondary-color);">续航优化流</h3>
+                        <p style="margin-bottom: 15px;">战灵天舞 + 希洛克/深渊潜行 + 攻速流。侧重于攻速与技能冷却缩减，适合长线作战环境。</p>
+                        <ul style="list-style: disc; margin-left: 20px; color: #ccc;">
+                            <li><strong>核心优势：</strong> 技能循环流畅。</li>
+                            <li><strong>适用场景：</strong> 高难度副本的持续输出。</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <!-- FAQ Section -->
+                <section>
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                    <div style="background-color: #222; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="color: #fff; margin-bottom: 5px;">战灵天舞适合什么职业？</h4>
+                        <p style="color: #aaa; font-size: 0.9rem;">战灵天舞对技能形态要求较高，非常适合技能范围大、无后摇的纯C职业，如剑魂、红眼、阿修罗等。辅助职业使用效果相对一般。</p>
+                    </div>
+                    <div style="background-color: #222; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #fff; margin-bottom: 5px;">如何快速提升战灵天舞的属性？</h4>
+                        <p style="color: #aaa; font-size: 0.9rem;">建议优先收集“灵魂之源”材料进行升级，同时关注希洛克和卢克西的装备词条选择，以最大化套装特效。</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">异面边界</a>
+                        <a href="#" class="tag">巴卡尔团本</a>
+                        <a href="#" class="tag">神话装备</a>
+                        <a href="#" class="tag">词条选择</a>
+                        <a href="#" class="tag">加点模拟</a>
+                        <a href="#" class="tag">装备分析</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">最新资讯</h3>
+                    <ul class="guide-list">
+                        <li><a href="#"><span>版本平衡性调整预告</span> <span style="color: #666;">10-24</span></a></li>
+                        <li><a href="#"><span>战灵天舞深渊票获取方式</span> <span style="color: #666;">10-22</span></a></li>
+                        <li><a href="#"><span>巴卡尔攻坚战通关技巧</span> <span style="color: #666;">10-20</span></a></li>
+                        <li><a href="#"><span>2024年职业排名更新</span> <span style="color: #666;">10-18</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">装备计算器</h3>
+                    <div style="text-align: center; padding: 10px;">
+                        <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 10px;">输入你的基础属性，一键计算装备收益。</p>
+                        <button class="cta-button" style="width: 100%; font-size: 0.9rem; padding: 10px;">打开计算器</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="color: #999; font-size: 0.9rem;">专注于地下城与勇士游戏内容分享，提供最及时、最准确的装备攻略与副本指南。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">职业大全</a></li>
+                    <li><a href="#">装备图鉴</a></li>
+                    <li><a href="#">活动中心</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>合作邮箱: contact@dnf-guide.com</li>
+                    <li>玩家QQ群: 123456789</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 DNF攻略站 版权所有. 本站内容仅供学习交流使用，与腾讯游戏无直接关联。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
