@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="怎么回稻香村？本站提供稻香村地理位置导航、交通路线详解、周边景点及游玩攻略，助您轻松规划前往稻香村的最佳行程。">
+    <meta name="keywords" content="怎么回稻香村,稻香村路线,稻香村交通,稻香村攻略">
+    <title>怎么回稻香村 - 稻香村交通路线与游玩指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #FDFBF7;
+            --text-color: #333;
+            --text-light: #666;
+            --card-bg: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .route-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .route-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .visual-guide {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .visual-guide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sidebar */
+        aside .card {
+            background: #fff8f0;
+            border: 1px solid #ffe4c4;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: none;
+            padding-left: 0.5rem;
+            border-left: 2px solid #ddd;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>🌾</span> 稻香村指南
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">交通路线</a></li>
+                    <li><a href="#">游玩攻略</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>怎么回稻香村</h1>
+        <p>无论您身处何处，无论选择何种交通工具，这里都有最详尽的路线指引与返程方案，助您顺利归家。</p>
+    </section>
+
+    <main class="container">
+        <!-- Main Content -->
+        <div class="content-area">
+            <article class="card">
+                <h2 class="section-title">返程核心路线概览</h2>
+                <p style="margin-bottom: 1rem;">前往稻香村的路线主要取决于您的出发地。以下是几种常见的返程场景，请根据实际情况对照查看。</p>
+                
+                <div class="visual-guide">
+                    <!-- Using a generic map placeholder style -->
+                    <img src="https://picsum.photos/seed/map123/800/400" alt="稻香村交通示意图">
+                </div>
+
+                <div class="route-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>自驾/打车返程</h3>
+                        <p>如果您是自驾前往，最直接的方式是使用导航软件（如高德、百度地图）搜索“稻香村风景区”或“稻香村停车场”。返程时，建议避开高峰时段的进城主干道，选择绕城高速或周边国道，以减少拥堵。若在景区停车场，请留意出口指示牌，通常设有专门的返程车道。</p>
+                    </div>
+                </div>
+
+                <div class="route-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>公共交通返程</h3>
+                        <p>公共交通方面，建议先乘坐至最近的“稻香村站”或“稻香村公交枢纽”。返程时，请留意末班车时间。通常景区直通车会在闭园前30分钟在指定地点（如游客中心门口）发车。如果错过直通车，可换乘至市区内的换乘枢纽，再转乘前往您所在区域的地铁或长途巴士。</p>
+                    </div>
+                </div>
+
+                <div class="route-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>骑行/徒步返程</h3>
+                        <p>对于选择骑行或徒步的游客，返程前请务必检查电量或体力。若计划骑行，请沿景区指定的绿道或国道返回，切勿抄近道进入未开发的林区。山区夜晚光线较暗，务必携带照明设备。</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">返程注意事项</h2>
+                <p>在规划“怎么回稻香村”时，除了路线，安全与细节同样重要。</p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem; color: var(--text-light);">
+                    <li style="margin-bottom: 0.5rem;"><strong>物品清点：</strong> 离开前请再次检查随身携带的贵重物品，确保无遗漏。</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>天气查询：</strong> 返程途中可能遭遇天气变化，建议提前查看天气预报，备好雨具或增减衣物。</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>路况更新：</strong> 出发前可查看实时路况，避开施工路段。</li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="card">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+                
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">Q：稻香村附近有哪些停车场？</span>
+                    <div class="faq-answer">A：景区设有A区生态停车场和B区游客中心停车场，共可容纳约2000辆车。建议优先选择B区，离入口更近。</div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">Q：晚上回不去怎么处理？</span>
+                    <div class="faq-answer">A：景区提供24小时咨询热线，可协助联系正规出租车或网约车。同时，景区内设有游客服务中心，提供临时休息和应急服务。</div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">Q：周末返程人多吗？</span>
+                    <div class="faq-answer">A：周末及节假日返程高峰期通常出现在下午4点至6点，建议尽量错峰出行或选择公共交通。</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">实用工具</h2>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">建议在出发前下载离线地图，以备网络不佳时使用。</p>
+                <a href="#" class="btn" style="width: 100%; text-align: center;">下载离线地图包</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 稻香村旅游指南网 | 仅供参考，具体路线以实时导航为准</p>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            // Toggle active class
+            element.classList.toggle('active');
+            
+            // Optional: Close others
+            const allFaqs = document.querySelectorAll('.faq-item');
+            allFaqs.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
