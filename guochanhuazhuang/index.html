@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本站提供国产化妆品牌排行榜前十名详细信息，包括花西子、完美日记、珀莱雅、自然堂、半亩花田、薇诺娜、卡姿兰、溪木源、毛戈平、韩束等知名国货美妆品牌测评、成分解析及选购指南。">
+    <meta name="keywords" content="国产化妆品牌排行榜前十名,国产美妆品牌,花西子,完美日记,珀莱雅,国货彩妆">
+    <title>国产化妆品牌排行榜前十名 - 国货美妆品牌深度测评与选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d94a4a; /* 类似花西子的朱砂红 */
+            --secondary-color: #f7f4f0; /* 暖米色背景 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --text-dark: #1a1a1a;
+            --accent-gold: #c5a065; /* 轻奢金 */
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background-color: #ffecec;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Ranking Section */
+        .ranking-section {
+            padding: 4rem 0;
+        }
+
+        .ranking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .brand-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+
+        .rank-badge.top-3 {
+            background: linear-gradient(135deg, #ffd700, #f0c020);
+            color: #fff;
+        }
+
+        .card-image-placeholder {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .brand-card:hover .card-image-placeholder img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .brand-category {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .brand-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .brand-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tag {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+
+        .card-footer {
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating {
+            color: #ff9f43;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #fff;
+            padding: 4rem 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .guide-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .guide-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .check-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-light);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .guide-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .ranking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>✦</span> 国妆优选
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">排行榜</a>
+                <a href="#">品牌测评</a>
+                <a href="#">成分百科</a>
+                <a href="#">护肤技巧</a>
+                <a href="#">彩妆教程</a>
+            </nav>
+            <button class="search-btn" aria-label="搜索">
+                🔍
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="tag">2024年度更新</span>
+                <h1>国产化妆品牌排行榜前十名</h1>
+                <p>深度解析当前市场热门国货美妆品牌，从成分技术到用户口碑，为您提供客观、专业的选购参考。</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>10+</strong>
+                        <span>权威品牌</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>50W+</strong>
+                        <span>用户评价</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>100%</strong>
+                        <span>国货溯源</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking List -->
+        <section class="ranking-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>国产化妆品牌排行榜前十名</h2>
+                    <p>综合品牌知名度、市场销量、用户口碑及产品创新力筛选出的优质品牌</p>
+                </div>
+
+                <div class="ranking-grid">
+                    <!-- Brand 1 -->
+                    <article class="brand-card">
+                        <div class="rank-badge top-3">1</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/huaxizi/400/300" alt="花西子品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">花西子</h3>
+                            <span class="brand-category">彩妆/高定彩妆</span>
+                            <p class="brand-desc">以东方美学为核心理念，擅长将传统工艺与现代彩妆结合，产品线涵盖眉笔、口红、粉底等，包装极具辨识度。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#东方美学</span>
+                                <span class="feature-tag">#高颜值</span>
+                                <span class="feature-tag">#东方彩妆</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.6</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 2 -->
+                    <article class="brand-card">
+                        <div class="rank-badge top-3">2</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/perfectdiary/400/300" alt="完美日记品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">完美日记</h3>
+                            <span class="brand-category">彩妆/护肤</span>
+                            <p class="brand-desc">早期凭借高性价比的口红和眼影盘迅速走红，拥有庞大的用户社群。近年来在护肤领域也有布局，注重成分研发。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#高性价比</span>
+                                <span class="feature-tag">#爆款多</span>
+                                <span class="feature-tag">#社群营销</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.5</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 3 -->
+                    <article class="brand-card">
+                        <div class="rank-badge top-3">3</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/proya/400/300" alt="珀莱雅品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">珀莱雅</h3>
+                            <span class="brand-category">护肤/抗初老</span>
+                            <p class="brand-desc">老牌国货的转型代表，在抗初老赛道表现强劲。其双抗精华、红宝石精华等单品在成分党中口碑极佳。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#抗初老</span>
+                                <span class="feature-tag">#成分党</span>
+                                <span class="feature-tag">#精华</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★★ 4.8</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 4 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">4</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/nature/400/300" alt="自然堂品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">自然堂</h3>
+                            <span class="brand-category">护肤/彩妆</span>
+                            <p class="brand-desc">源自喜马拉雅的品牌，主打高山植物萃取。产品线丰富，覆盖大众护肤到专业修护，性价比高，线下渠道广泛。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#高山植物</span>
+                                <span class="feature-tag">#大众护肤</span>
+                                <span class="feature-tag">#性价比</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.4</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 5 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">5</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/sannumu/400/300" alt="半亩花田品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">半亩花田</h3>
+                            <span class="brand-category">护肤/身体护理</span>
+                            <p class="brand-desc">以果酸身体乳起家，凭借高浓度的果酸成分在去角质和身体护理领域占据重要地位，是很多入门级刷酸用户的首选。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#果酸</span>
+                                <span class="feature-tag">#身体乳</span>
+                                <span class="feature-tag">#入门刷酸</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.5</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 6 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">6</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/wayna/400/300" alt="薇诺娜品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">薇诺娜</h3>
+                            <span class="brand-category">功效护肤/敏感肌</span>
+                            <p class="brand-desc">专注于敏感肌护理，产品配方温和，主打马齿苋、青刺果等植物提取物，在医美后修复和敏感肌人群中有极高声誉。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#敏感肌</span>
+                                <span class="feature-tag">#温和</span>
+                                <span class="feature-tag">#修护</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★★ 4.7</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 7 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">7</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/carlor/400/300" alt="卡姿兰品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">卡姿兰</h3>
+                            <span class="brand-category">彩妆/护肤</span>
+                            <p class="brand-desc">国内较早进入彩妆市场的品牌之一，以眼部彩妆（眼线笔、睫毛膏）见长，同时拥有成熟的护肤线，适合大众日常通勤。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#眼妆</span>
+                                <span class="feature-tag">#大众彩妆</span>
+                                <span class="feature-tag">#日常</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.3</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 8 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">8</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/sunyoo/400/300" alt="溪木源品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">溪木源</h3>
+                            <span class="brand-category">功效护肤/植物科技</span>
+                            <p class="brand-desc">主打“森林护肤”，利用植物科技解决皮肤问题，如山茶花系列针对痘肌，产品定位年轻化，包装设计简约清新。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#森林护肤</span>
+                                <span class="feature-tag">#植物科技</span>
+                                <span class="feature-tag">#年轻化</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.4</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 9 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">9</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/magepie/400/300" alt="毛戈平品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">毛戈平</h3>
+                            <span class="brand-category">彩妆/专业培训</span>
+                            <p class="brand-desc">以“东方调彩妆”和精湛的化妆技艺闻名，拥有专业的化妆学校背景，其粉底液和粉饼在专业彩妆师中认可度极高。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#专业彩妆</span>
+                                <span class="feature-tag">#粉底液</span>
+                                <span class="feature-tag">#化妆学校</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★★ 4.6</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Brand 10 -->
+                    <article class="brand-card">
+                        <div class="rank-badge">10</div>
+                        <div class="card-image-placeholder">
+                            <img src="https://picsum.photos/seed/kanse/400/300" alt="韩束品牌Logo">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="brand-name">韩束</h3>
+                            <span class="brand-category">护肤/彩妆</span>
+                            <p class="brand-desc">近年来在电商渠道表现抢眼，主打红米系列，强调美白、抗氧功效。品牌形象年轻时尚，深受年轻女性喜爱。</p>
+                            <div class="brand-features">
+                                <span class="feature-tag">#红米系列</span>
+                                <span class="feature-tag">#美白</span>
+                                <span class="feature-tag">#电商爆款</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="rating">★★★★☆ 4.4</div>
+                                <a href="#" class="btn-link">查看详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="guide-section">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-text">
+                        <span class="tag">选购指南</span>
+                        <h3>如何挑选适合自己的国产化妆品牌？</h3>
+                        <p>面对市场上琳琅满目的国货品牌，消费者往往感到困惑。除了参考排行榜，还应根据自身肤质和需求进行选择。</p>
+                        <ul class="check-list">
+                            <li><strong>明确肤质：</strong>干性皮肤适合滋润型产品，油性皮肤适合清爽控油配方，敏感肌需优先选择无酒精、无香精的舒缓产品。</li>
+                            <li><strong>关注成分：</strong>查看产品成分表，如烟酰胺、视黄醇（维A醇）、玻尿酸等，了解其功效和适用人群。</li>
+                            <li><strong>参考口碑：</strong>结合第三方测评数据和真实用户评价，避免盲目跟风购买网红爆款。</li>
+                            <li><strong>试用体验：</strong>如果条件允许，建议先购买小样进行试用，确认不过敏后再购买正装。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/makeupguide/600/400" alt="国货美妆产品展示">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container faq-container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        国产化妆品牌和进口品牌有什么区别？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>国产品牌在研发上更贴合东方人的肤质和审美，且价格通常更具竞争力。部分头部国产品牌（如珀莱雅、薇诺娜）在配方技术上已达到国际水准。进口品牌可能在某些特定成分或专利技术上具有优势。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        国货彩妆中哪个品牌的口碑最好？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>口碑因人而异。花西子在包装和彩妆设计上备受赞誉，毛戈平在专业彩妆领域地位稳固，完美日记则在平价彩妆选择上非常丰富。建议根据具体产品类别（如眼影、粉底、口红）进行横向对比。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        敏感肌可以用国产护肤品吗？
+                        <span class="icon-plus">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以，但必须选择专门针对敏感肌设计的产品。薇诺娜、玉泽等品牌在敏感肌护理领域有很好的表现。使用前请务必进行耳后测试，避免过敏反应。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌介绍</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">护肤品牌</a></li>
+                        <li><a href="#">彩妆品牌</a></li>
+                        <li><a href="#">男士护肤</a></li>
+                        <li><a href="#">小众品牌</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 国妆优选网. All Rights Reserved. 本站内容仅供参考，不构成购买建议。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
